@@ -172,3 +172,7 @@ npm install --global gulp-cli
 rvm install 2.3.3
 ```
 
+```shell
+gem install bundler
+```
+
