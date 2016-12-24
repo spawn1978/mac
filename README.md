@@ -27,15 +27,19 @@ touch Brewfile
 ```
 
 ```
-tap 'caskroom/cask'
+tap caskroom/cask
 
-brew 'git'
-brew 'node'
-brew 'npm'
+brew git
+brew node
+brew npm
 
-cask 'firefox'
-cask 'google-chrome'
-cask 'opera'
+cask brackets
+cask flux
+cask firefox
+cask google-chrome
+cask opera
+cask spectacle
+cask sequel-pro
 
 mas 'Pages', id: 409201541
 mas 'Slack', id: 803453959
@@ -68,7 +72,23 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
 ```
-git config --global user.name "Tania Rascia"
-git config --global user.email taniarascia@gmail.com
-git config --global github.user taniarascia
+git config --global user.name "Firstname Lastname"
+git config --global user.email email@email.com
+git config --global github.user username
 ```
+
+### SSH
+
+```
+cd ~./ssh && touch config`
+```
+
+```
+Host example
+    HostName example.com
+    User example-user
+    IdentityFile key.pem
+```
+
+
+
