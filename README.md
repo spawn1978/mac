@@ -2,8 +2,33 @@
 
 ## Preferences
 
-**Keyboard > Text >** Disable "Correct spelling automatically".
-**Security and Privacy > Firewall >** On
+- **Keyboard > Text >** Disable "Correct spelling automatically".
+- **Security and Privacy > Firewall >** On
+-  **Security and Privacy > General >** App Store and identified developers
+
+### Show Library folder
+
+```
+chflags nohidden ~/Library
+```
+
+### Show hidden files
+
+```
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+### Show path bar
+
+```
+defaults write com.apple.finder ShowPathbar -bool true
+```
+
+### Show status bar
+
+```
+defaults write com.apple.finder ShowStatusBar -bool true
+```
 
 ## Software
 
@@ -41,46 +66,26 @@ brew 'npm'
 cask 'brackets'
 cask 'flux'
 cask 'firefox'
+cask 'gimp'
 cask 'google-chrome'
 cask 'opera'
 cask 'spectacle'
 cask 'sequel-pro'
+cask 'utorrent'
+cask 'vlc'
 
+mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Slack', id: 803453959
 mas 'Sip', id: 507257563 
 mas 'Simplenote', id: 692867256 
 mas 'Todoist', id: 585829637
-mas 'Numbers', id: 409203825
-```
-
-### Preferences
-
-#### Show Library folder
-
-```
-chflags nohidden ~/Library
-```
-
-#### Show hidden files
-
-```
-defaults write com.apple.finder AppleShowAllFiles YES
-```
-
-#### Show path bar
-
-```
-defaults write com.apple.finder ShowPathbar -bool true
-```
-
-#### Show status bar
-
-```
-defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 ### GitHub
+
+- **Location** - `~/.gitconfig`
+
 
 #### Generate SSH key
 
@@ -110,9 +115,7 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 
 ### SSH
 
-```
-cd ~./ssh && touch config
-```
+- **Location** - `~./ssh/config`
 
 ```
 Host example
@@ -123,9 +126,7 @@ Host example
 
 ### Bash
 
-```
-touch .bash_profile
-```
+- **Location** - `~/.bash_profile`
 
 ```
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
@@ -133,6 +134,14 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 ```
 source ~/.bash_profile
+```
+
+### NPM
+
+#### Gulp
+
+```
+npm install --global gulp-cli
 ```
 
 
