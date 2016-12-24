@@ -112,6 +112,8 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 	puog = pull origin gh-pages
     
 	cob = checkout -b
+[credential]
+	helper = osxkeychain
 ```
 
 ### SSH
