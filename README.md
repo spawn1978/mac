@@ -27,19 +27,19 @@ touch Brewfile
 ```
 
 ```
-tap caskroom/cask
+tap 'caskroom/cask'
 
-brew git
-brew node
-brew npm
+brew 'git'
+brew 'node'
+brew 'npm'
 
-cask brackets
-cask flux
-cask firefox
-cask google-chrome
-cask opera
-cask spectacle
-cask sequel-pro
+cask 'brackets'
+cask 'flux'
+cask 'firefox'
+cask 'google-chrome'
+cask 'opera'
+cask 'spectacle'
+cask 'sequel-pro'
 
 mas 'Pages', id: 409201541
 mas 'Slack', id: 803453959
@@ -57,7 +57,7 @@ mas 'Numbers', id: 409203825
 chflags nohidden ~/Library
 ```
 
-### Show hidden files
+#### Show hidden files
 
 ```
 defaults write com.apple.finder AppleShowAllFiles YES
@@ -72,9 +72,23 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
 ```
-git config --global user.name "Firstname Lastname"
-git config --global user.email email@email.com
-git config --global github.user username
+[user]
+	name = First Last
+	email = email@email.com
+[github]
+	user = username
+[alias]
+	a = add
+	ca = commit -a
+	cam = commit -am
+	s = status
+
+	pom = push origin master
+	pog = push origin gh-pages
+	puom = pull origin master
+	puog = pull origin gh-pages
+    
+	cob = checkout -b
 ```
 
 ### SSH
@@ -89,6 +103,14 @@ Host example
     User example-user
     IdentityFile key.pem
 ```
+
+### Bash
+
+```
+touch .bash_profile
+```
+
+
 
 
 
