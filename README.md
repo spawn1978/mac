@@ -94,7 +94,7 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ### SSH
 
 ```
-cd ~./ssh && touch config`
+cd ~./ssh && touch config
 ```
 
 ```
@@ -108,6 +108,14 @@ Host example
 
 ```
 touch .bash_profile
+```
+
+```
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+```
+
+```
+source ~/.bash_profile
 ```
 
 
