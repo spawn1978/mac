@@ -10,25 +10,25 @@
 
 ### Show Library folder
 
-```
+```shell
 chflags nohidden ~/Library
 ```
 
 ### Show hidden files
 
-```
+```shell
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
 ### Show path bar
 
-```
+```shell
 defaults write com.apple.finder ShowPathbar -bool true
 ```
 
 ### Show status bar
 
-```
+```shell
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
@@ -42,23 +42,23 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 ### Mac App Store
 
-```
+```shell
 brew install mas
 ```
 
 #### Sign in
 
-```
+```shell
 mas signin email@email.com
 ```
 
 ### Brewfile
 
-```
+```shell
 touch Brewfile
 ```
 
-```
+```shell
 tap 'caskroom/cask'
 
 brew 'git'
@@ -88,18 +88,18 @@ mas 'Todoist', id: 585829637
 
 #### Config
 
-```
+```shell
 ~/.gitconfig
 ```
 
 
 #### Generate SSH key
 
-```
+```shell
 ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
-```
+```shell
 [user]
 	name = First Last
 	email = email@email.com
@@ -123,11 +123,11 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 
 #### Config
 
-```
+```shell
 ~./ssh/config
 ```
 
-```
+```shell
 Host example
     HostName example.com
     User example-user
@@ -138,15 +138,15 @@ Host example
 
 #### Config
 
-```
+```shell
 ~/.bash_profile
 ```
 
-```
+```shell
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 ```
 
-```
+```shell
 source ~/.bash_profile
 ```
 
@@ -154,7 +154,7 @@ source ~/.bash_profile
 
 #### Gulp
 
-```
+```shell
 npm install --global gulp-cli
 ```
 
@@ -162,13 +162,13 @@ npm install --global gulp-cli
 
 #### Download rvm
 
-```
+```shell
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
 #### Install Ruby version
 
-```
+```shell
 rvm install 2.3.3
 ```
 
