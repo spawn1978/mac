@@ -84,7 +84,11 @@ mas 'Todoist', id: 585829637
 
 ### GitHub
 
-- **Location** - `~/.gitconfig`
+#### Config
+
+```
+~/.gitconfig
+```
 
 
 #### Generate SSH key
@@ -115,7 +119,11 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 
 ### SSH
 
-- **Location** - `~./ssh/config`
+#### Config
+
+```
+~./ssh/config
+```
 
 ```
 Host example
@@ -126,7 +134,11 @@ Host example
 
 ### Bash
 
-- **Location** - `~/.bash_profile`
+#### Config
+
+```
+~/.bash_profile
+```
 
 ```
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
