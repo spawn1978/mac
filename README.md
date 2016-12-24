@@ -36,7 +36,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 ### Homebrew
 
-```
+```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
