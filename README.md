@@ -4,7 +4,9 @@
 
 - **Keyboard > Text >** Disable "Correct spelling automatically".
 - **Security and Privacy > Firewall >** On
--  **Security and Privacy > General >** App Store and identified developers
+- **Security and Privacy > General >** App Store and identified developers
+- **File Sharing >** Off
+- **Users & Groups > Login Items > ** Spectacle, Flux
 
 ### Show Library folder
 
@@ -148,7 +150,7 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 source ~/.bash_profile
 ```
 
-### NPM
+### Node Package Manager
 
 #### Gulp
 
@@ -156,7 +158,17 @@ source ~/.bash_profile
 npm install --global gulp-cli
 ```
 
+### Ruby Version Manager
 
+#### Download rvm
 
+```
+\curl -sSL https://get.rvm.io | bash -s stable
+```
 
+#### Install Ruby version
+
+```
+rvm install 2.3.3
+```
 
