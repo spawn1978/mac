@@ -6,7 +6,7 @@
 - **Security and Privacy > Firewall >** On
 - **Security and Privacy > General >** App Store and identified developers
 - **File Sharing >** Off
-- **Users & Groups > Login Items > ** Spectacle, Flux
+- **Users & Groups > Login Items >** Spectacle, Flux
 
 ### Show Library folder
 
