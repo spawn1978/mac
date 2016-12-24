@@ -1,5 +1,10 @@
 # macOS Sierra v. 10.12 Setup 
 
+## Preferences
+
+**Keyboard > Text >** Disable "Correct spelling automatically".
+**Security and Privacy > Firewall >** On
+
 ## Software
 
 ### Homebrew
@@ -61,6 +66,18 @@ chflags nohidden ~/Library
 
 ```
 defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+#### Show path bar
+
+```
+defaults write com.apple.finder ShowPathbar -bool true
+```
+
+#### Show status bar
+
+```
+defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 ### GitHub
