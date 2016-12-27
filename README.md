@@ -32,9 +32,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-## Software
-
-### Homebrew
+## Homebrew
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -84,15 +82,10 @@ mas 'Simplenote', id: 692867256
 mas 'Todoist', id: 585829637
 ```
 
-### GitHub
+## GitHub
 
-#### Config - `~/.gitconfig`
+### Config - `~/.gitconfig`
 
-#### Generate SSH key
-
-```shell
-ssh-keygen -t rsa -b 4096 -C "email@email.com"
-```
 
 ```shell
 [user]
@@ -105,20 +98,19 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 	ca = commit -a
 	cam = commit -am
 	s = status
-
 	pom = push origin master
 	pog = push origin gh-pages
 	puom = pull origin master
 	puog = pull origin gh-pages
-    
 	cob = checkout -b
 [credential]
 	helper = osxkeychain
 ```
 
-### SSH
 
-#### Config - `~./ssh/config`
+## SSH
+
+### Config - `~./ssh/config`
 
 ```shell
 Host example
@@ -127,9 +119,15 @@ Host example
     IdentityFile key.pem
 ```
 
-### Bash
+### Generate SSH key
 
-#### Config - `~/.bash_profile`
+```shell
+ssh-keygen -t rsa -b 4096 -C "email@email.com"
+```
+
+## Bash
+
+### Config - `~/.bash_profile`
 
 ```shell
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
@@ -139,23 +137,23 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 source ~/.bash_profile
 ```
 
-### Node Package Manager
+## Node Package Manager
 
-#### Gulp
+### Gulp
 
 ```shell
 npm install --global gulp-cli
 ```
 
-### Ruby Version Manager
+## Ruby Version Manager
 
-#### Download rvm
+### Download rvm
 
 ```shell
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-#### Install Ruby version
+### Install Ruby version
 
 ```shell
 rvm install 2.3.3
