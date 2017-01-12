@@ -20,6 +20,8 @@ chflags nohidden ~/Library
 
 ### Show hidden files
 
+This can also be done by pressing `command` + `shift` + `.`.
+
 ```shell
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
