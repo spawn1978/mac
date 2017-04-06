@@ -66,7 +66,6 @@ touch Brewfile
 tap 'caskroom/cask'
 
 brew 'git'
-brew 'node'
 brew 'npm'
 
 cask 'brackets'
@@ -143,6 +142,30 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 source ~/.bash_profile
 ```
 
+### Terminal Colors
+
+```bash
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+```
+
+## Node.js
+
+### Download Node
+
+```shell
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+```
+
+```shell
+nvm install node
+```
+
+```shell
+nvm use node
+```
+
 ## Node Package Manager
 
 ### Gulp
@@ -162,7 +185,11 @@ npm install --global gulp-cli
 ### Install Ruby version
 
 ```shell
-rvm install 2.3.3
+rvm install ruby-head
+```
+
+```shell
+rvm --default use 2.4.0
 ```
 
 ```shell
