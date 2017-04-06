@@ -1,6 +1,6 @@
 # macOS Sierra v. 10.12 Setup 
 
-*12/29/16*
+*4/6/17*
 
 [View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
 
