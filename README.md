@@ -1,8 +1,8 @@
 # macOS Sierra v. 10.12 Setup 
 
-*4/6/17*
+[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
 
-[View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/)
+This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for front end web development.
 
 ## Preferences
 
