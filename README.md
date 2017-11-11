@@ -166,6 +166,12 @@ nvm install node
 nvm use node
 ```
 
+For later: how tou update node:
+
+```shell
+nvm install node --reinstall-packages-from=node
+```
+
 ## Node Package Manager
 
 ### Gulp
