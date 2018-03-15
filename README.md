@@ -1,4 +1,4 @@
-# macOS Sierra v. 10.12 Setup 
+# macOS Sierra v. 10.13 Setup 
 
 [View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
 
@@ -145,9 +145,12 @@ source ~/.bash_profile
 ### Terminal Colors
 
 ```bash
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
 ```
 
 ## Node.js
