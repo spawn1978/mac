@@ -205,3 +205,9 @@ rvm --default use 2.4.0
 gem install bundler
 ```
 
+## Install Composer
+
+```shell
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+```
