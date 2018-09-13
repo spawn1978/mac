@@ -2,7 +2,7 @@
 
 [View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
 
-This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for front end web development.
+This is a simple list of instructions to make setting up your Apple computer as fast and efficient as possible for web development.
 
 ## Preferences
 
@@ -38,7 +38,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-### Disable Unidentified Developer Warnings
+### Disable unidentified developer warnings
 
 ```shell
 sudo spctl --master-disable
@@ -74,8 +74,7 @@ tap 'caskroom/cask'
 brew 'git'
 brew 'npm'
 
-cask 'brackets'
-cask 'flux'
+cask 'visual-studio-code'
 cask 'firefox'
 cask 'gimp'
 cask 'google-chrome'
@@ -84,9 +83,8 @@ cask 'spectacle'
 cask 'sequel-pro'
 cask 'utorrent'
 cask 'vlc'
+cask 'macdown'
 
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
 mas 'Slack', id: 803453959
 mas 'Sip', id: 507257563 
 mas 'Simplenote', id: 692867256 
@@ -100,22 +98,28 @@ mas 'Todoist', id: 585829637
 
 ```shell
 [user]
-	name = First Last
-	email = email@email.com
+  name   = Firstname Lastname
+  email  = you@example.com
 [github]
-	user = username
+  user   = hunter2
 [alias]
-	a = add
-	ca = commit -a
-	cam = commit -am
-	s = status
-	pom = push origin master
-	pog = push origin gh-pages
-	puom = pull origin master
-	puog = pull origin gh-pages
-	cob = checkout -b
+  a      = add
+  ca     = commit -a
+  cam    = commit -am
+  cm     = commit -m
+  s      = status
+  pom    = push origin master
+  pog    = push origin gh-pages
+  puom   = pull origin master
+  puog   = pull origin gh-pages
+  cob    = checkout -b
+  co     = checkout
+  l      = log --oneline --decorate --graph
+  lall   = log --oneline --decorate --graph --all
+  ls     = log --oneline --decorate --graph --stat
+  lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 ```
 
 
@@ -133,7 +137,9 @@ Host example
 ### Generate SSH key
 
 ```shell
-ssh-keygen -t rsa -b 4096 -C "email@email.com"
+ssh-keygen -t rsa -b 4096 -C "you@example.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
 ```
 
 ## Bash
@@ -141,21 +147,19 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ### Config - `~/.bash_profile`
 
 ```shell
+# Update and clean homebrow in one command
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-```
 
-```shell
-source ~/.bash_profile
-```
-
-### Terminal Colors
-
-```bash
+# Add colors to Terminal
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Get Git branch
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+# Format to user@host:/path/to/directory (branch-name)
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
 ```
 
@@ -175,13 +179,13 @@ nvm install node
 nvm use node
 ```
 
-For later: how tou update node:
+#### Update Node.js
 
 ```shell
 nvm install node --reinstall-packages-from=node
 ```
 
-## Node Package Manager
+## npm
 
 ### Gulp
 
