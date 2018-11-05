@@ -1,4 +1,4 @@
-# macOS High Sierra v. 10.13 Setup 
+# macOS Mojave v. 10.14 Setup 
 
 [View a more detailed explanation of these steps here.](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/) 
 
