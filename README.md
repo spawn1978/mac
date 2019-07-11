@@ -185,13 +185,13 @@ nvm use node
 nvm install node --reinstall-packages-from=node
 ```
 
-## npm
+#### Find all outdated global packages
 
-### Gulp
-
-```shell
-npm install --global gulp-cli
 ```
+npm outdated -g --depth=0
+```
+
+## npm
 
 ## Ruby Version Manager
 
